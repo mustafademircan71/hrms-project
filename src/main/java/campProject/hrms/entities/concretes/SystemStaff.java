@@ -2,7 +2,7 @@ package campProject.hrms.entities.concretes;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,22 +10,26 @@ import campProject.hrms.entities.abstracts.Entities;
 import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import lombok.NoArgsConstructor;
+
 
 @Entity
 @Data
-@Table(name="job_position")
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPosition implements Entities  {
-
+@Table(name="system_staff")
+public class SystemStaff  implements Entities {
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
-	private int id;
+	@GeneratedValue
+	@Column(name="user_id")
+	private int userId;
 	
-	@Column(name="position_name")
-	private String positionName;
+	@Column(name="first_name")
+	private String firstName;
 	
+	@Column(name="last_name")
+	private String lastName;
 	
 }

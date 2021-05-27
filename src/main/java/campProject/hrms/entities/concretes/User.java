@@ -5,6 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 import campProject.hrms.entities.abstracts.Entities;
 import javax.persistence.Entity;
@@ -14,18 +16,26 @@ import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@Table(name="job_position")
 @AllArgsConstructor
 @NoArgsConstructor
-public class JobPosition implements Entities  {
-
+@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name="users")
+public class User implements Entities {
+	
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="id")
+	@Column(name="user_id")
 	private int id;
 	
-	@Column(name="position_name")
-	private String positionName;
+	@Column(name="email")
+	private String email;
 	
+	@Column(name="password")
+	private String password;
 	
+	@Column(name="repeatpassword")
+	private String repeatPassword;
+	
+
 }

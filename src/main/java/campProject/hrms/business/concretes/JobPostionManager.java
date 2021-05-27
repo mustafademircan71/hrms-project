@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import campProject.hrms.business.abstracts.JobPostionService;
+import campProject.hrms.core.utilities.results.ErrorResult;
+import campProject.hrms.core.utilities.results.Result;
+import campProject.hrms.core.utilities.results.SuccessResult;
 import campProject.hrms.dataAccess.abstracts.JobPostionDao;
 import campProject.hrms.entities.concretes.JobPosition;
 
@@ -24,6 +27,17 @@ public class JobPostionManager implements JobPostionService {
 	public List<JobPosition> getAll() {
 		
 		return jobPostionDao.findAll();
+	}
+
+	@Override
+	public Result add(JobPosition jobPostion) {
+		if(jobPostion.getPositionName().isEmpty()) {
+			return new ErrorResult("Bu isimle kayıtlı pozisyon zaten var");
+		}else {
+			jobPostionDao.save(jobPostion);
+			return new SuccessResult("Kayıt Eklendi");
+		}
+		
 	}
 
 }

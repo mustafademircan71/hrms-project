@@ -7,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-
 import campProject.hrms.entities.abstracts.Entities;
 import javax.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -36,6 +35,7 @@ public class User implements Entities {
 	
 	@Column(name="repeatpassword")
 	private String repeatPassword;
+	
 	
 
 }

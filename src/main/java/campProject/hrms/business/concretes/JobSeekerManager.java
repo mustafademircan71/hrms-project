@@ -56,4 +56,11 @@ public class JobSeekerManager implements JobSeekerService {
 	
 	}
 
+	@Override
+	public DataResult<JobSeeker> getById(int id) {
+		return new SuccesDataResult<JobSeeker>(this.jobSeekerDao.getById(id),"Data Listelendi");
+	}
+
+
+
 }

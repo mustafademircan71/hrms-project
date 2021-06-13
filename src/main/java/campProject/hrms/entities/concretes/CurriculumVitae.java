@@ -3,15 +3,13 @@ package campProject.hrms.entities.concretes;
 
 import java.util.List;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -28,13 +26,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="curriculum_vitaes")
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker","photos"})
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobSeeker","photos","educationInfos","educationInfos"
+	,"expreinces","languages"})
 public class CurriculumVitae implements Entities {
 		
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		@Column(name="id")
-		private int id;
+		@Column(name="cv_id")
+		private int cvId;
 		
 		@Column(name="git_hub_address")
 		@NotNull(message="Bu Alan Boş Olamaz")
@@ -58,17 +57,26 @@ public class CurriculumVitae implements Entities {
 		@OneToMany(mappedBy="curriculumVitae")
 		private List<Photo> photos;
 		
-		@ManyToOne(cascade=CascadeType.ALL)
-		@JoinColumn(name="education_id")
-		private EducationInfo educationInfo;
+		@OneToMany(mappedBy="curriculumVitae")
+		private List<EducationInfo> educationInfos;
 		
-		@ManyToOne(cascade=CascadeType.ALL)
-		@JoinColumn(name="expreience_id")
-		private Experience experience;
+		@OneToMany(mappedBy="curriculumVitae")
+		private List<Experience> expreinces;
 		
-		@ManyToOne(cascade=CascadeType.ALL)
-		@JoinColumn(name="language_id")
-		private Language language;
+		@OneToMany(mappedBy="curriculumVitae")
+		private List<Language> languages;
+		
+		//@ManyToOne(cascade=CascadeType.ALL)
+		//@JoinColumn(name="education_id")
+		//private EducationInfo educationInfo;
+		
+		//@ManyToOne(cascade=CascadeType.ALL)
+		//@JoinColumn(name="expreience_id")
+		//private Experience experience;
+		
+		//@ManyToOne(cascade=CascadeType.ALL)
+		//@JoinColumn(name="language_id")
+		//private Language language;
 		
 	
 		

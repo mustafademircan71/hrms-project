@@ -4,6 +4,7 @@ package campProject.hrms.api.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,6 +19,7 @@ import campProject.hrms.entities.concretes.JobAdvertisement;
 
 @RestController
 @RequestMapping("/api/jobAdvertisement")
+@CrossOrigin
 public class JobAdvertisementsController {
 		
 	private JobAdvertisementService jobAdvertisementService;
@@ -46,8 +48,8 @@ public class JobAdvertisementsController {
 		return this.jobAdvertisementService.getAllDate();
 	}
 	@GetMapping("/getAllEmployers")
-	public DataResult<List<JobAdvertisement>> getAllEmployers(int UserId){
-		return this.jobAdvertisementService.getByEmployer_Id(UserId);
+	public DataResult<List<JobAdvertisement>> getAllEmployers(int id){
+		return this.jobAdvertisementService.getByEmployer_Id(id);
 	}
 	
 	@GetMapping("/getById")

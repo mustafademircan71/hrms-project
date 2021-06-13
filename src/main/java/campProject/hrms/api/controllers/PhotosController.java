@@ -36,7 +36,7 @@ public class PhotosController {
 		public Result add(@RequestParam MultipartFile image,@RequestParam int id) {
 			CurriculumVitae curriculumVitae=new CurriculumVitae();
 			Photo photo=new Photo();
-			curriculumVitae.setId(id);
+			curriculumVitae.setCvId(id);
 			photo.setCurriculumVitae(curriculumVitae);
 			return this.photoService.add(photo, image);
 			

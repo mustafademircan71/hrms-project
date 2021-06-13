@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="Job_advertisement")
+@Table(name="Job_advertisements")
 public class JobAdvertisement implements Entities {
 		
 		@Id
@@ -50,7 +50,7 @@ public class JobAdvertisement implements Entities {
 		private LocalDate deadlineDate;
 		
 		@ManyToOne()
-		@JoinColumn(name="user_id")
+		@JoinColumn(name="employer_id")
 		private Employer employer;
 		
 		@ManyToOne()

@@ -1,16 +1,12 @@
 package campProject.hrms.entities.concretes;
 
 import java.util.List;
-
 import javax.persistence.Column;
-
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,14 +16,14 @@ import lombok.NoArgsConstructor;
 
 
 @Entity
-@EqualsAndHashCode(callSuper=true)
 @Data
+@EqualsAndHashCode(callSuper=true)
 @AllArgsConstructor
 @NoArgsConstructor
 @PrimaryKeyJoinColumn(name = "user_id")
 @Table(name="employers")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdvertisement"})
-public class Employer extends User  {
+public class Employer extends User {
 		
 		@Column(name="company_name")
 		private String companyName;

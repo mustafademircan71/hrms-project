@@ -42,13 +42,13 @@ public class CurriculumVitaeManager implements CurriculumVitaeService {
 
 	@Override
 	public DataResult<CurriculumVitae> getById(int id) {
-		return new SuccesDataResult<CurriculumVitae>(this.curriculumVitaeDao.getById(id),"Data Listelendi");
+		return new SuccesDataResult<CurriculumVitae>(this.curriculumVitaeDao.getByCvId(id),"Data Listelendi");
 	}
 
-	@Override
-	public DataResult<List<CurriculumVitae>> getByCurriculumVitaeAndJobSeeker(int id) {
-		return new SuccesDataResult<List<CurriculumVitae>>
-		(this.curriculumVitaeDao.getByCurriculumVitaeForUserId(id),"Data Listelendi");
-	}
+	
+
+	
+
+	
 
 }

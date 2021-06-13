@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_C29jALfNEeuqQYBXgB17uw" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_C29jAbfNEeuqQYBXgB17uw" bindingContexts="_C29jCrfNEeuqQYBXgB17uw">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="_C29jAbfNEeuqQYBXgB17uw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_DYcfcbfNEeuqQYBXgB17uw" label="%trimmedwindow.label.eclipseSDK" x="156" y="156" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_C29jAbfNEeuqQYBXgB17uw" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_DYcfcbfNEeuqQYBXgB17uw" label="%trimmedwindow.label.eclipseSDK" x="145" y="17" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -10,7 +10,6 @@
     <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1621334104916"/>
     <tags>topLevel</tags>
-    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_DYcfcbfNEeuqQYBXgB17uw" selectedElement="_DYdGgLfNEeuqQYBXgB17uw" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_DYdGgLfNEeuqQYBXgB17uw" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_Dv2S0LfNEeuqQYBXgB17uw">
         <children xsi:type="advanced:Perspective" xmi:id="_Dv2S0LfNEeuqQYBXgB17uw" elementId="org.eclipse.jst.j2ee.J2EEPerspective" selectedElement="_Dv2S0bfNEeuqQYBXgB17uw" label="Java EE" iconURI="platform:/plugin/org.eclipse.jst.j2ee.ui/icons/full/cview16/j2ee_perspective.gif">
@@ -342,7 +341,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DeOXULfNEeuqQYBXgB17uw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_HnvZ5709Eeumte04TsJt6g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_C4l607fNEeuqQYBXgB17uw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_kAPpsMk0EeuTqu2SaZOCQg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_C4l607fNEeuqQYBXgB17uw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DeOXUbfNEeuqQYBXgB17uw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -376,7 +375,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DePlcLfNEeuqQYBXgB17uw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_Hn5K6L09Eeumte04TsJt6g" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_C4lTy7fNEeuqQYBXgB17uw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_kAYMkMk0EeuTqu2SaZOCQg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_C4lTy7fNEeuqQYBXgB17uw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_DePlcbfNEeuqQYBXgB17uw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -2860,7 +2859,7 @@
   <addons xmi:id="_C2-KE7fNEeuqQYBXgB17uw" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
   <addons xmi:id="_C2-KFLfNEeuqQYBXgB17uw" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.platform" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
   <addons xmi:id="_C3RsELfNEeuqQYBXgB17uw" elementId="SplitterAddon" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.splitteraddon.SplitterAddon"/>
-  <addons xmi:id="_IYS0IKimEeS11vbz3f9ezw" elementId="org.eclipse.ui.ide.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
+  <addons xmi:id="_jgWosck0EeuTqu2SaZOCQg" elementId="org.eclipse.ui.ide.addon.0" contributionURI="bundleclass://org.eclipse.ui.ide/org.eclipse.ui.internal.ide.addons.SaveAllDirtyPartsAddon"/>
   <addons xmi:id="_dz0JgGOlEeSMMaPQU2nlzw" elementId="org.eclipse.ui.ide.application.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.ui.ide.application/org.eclipse.ui.internal.ide.application.addons.ModelCleanupAddon"/>
   <categories xmi:id="_C4M5ILfNEeuqQYBXgB17uw" elementId="org.eclipse.ui.category.edit" name="Edit"/>
   <categories xmi:id="_C4M5IbfNEeuqQYBXgB17uw" elementId="org.eclipse.mylyn.wikitext.ui.editor.category" name="WikiText Markup Editing Commands" description="commands for editing lightweight markup"/>

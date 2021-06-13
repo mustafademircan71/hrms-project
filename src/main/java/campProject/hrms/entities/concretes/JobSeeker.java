@@ -1,8 +1,6 @@
 package campProject.hrms.entities.concretes;
 
-
-
-import java.util.List;
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 
@@ -12,9 +10,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import campProject.hrms.entities.abstracts.Entities;
 import javax.persistence.Entity;
+
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -28,7 +27,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name="job_seekers")
-@JsonIgnoreProperties({"hibernateLazyInitializer","handler","photos","users"})
+@PrimaryKeyJoinColumn(name = "user_id")
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler","photos",})
 public class JobSeeker extends User implements Entities  {
 		
 		@Column(name="first_name")
@@ -41,7 +41,7 @@ public class JobSeeker extends User implements Entities  {
 		private String identityNo;
 		
 		@Column(name="date_of_birth")
-		private int dateOfBirth;
+		private LocalDate dateOfBirth;
 		
 		@ManyToOne()
 		@JoinColumn(name="id")
